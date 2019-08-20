@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #仓库地址{application}=spring.application.name: config-server
+          uri: https://github.com/demo9781/config-server
+          searchPaths: config
+          #用户名
+          username: 136799429@qq.com
+          #密码
+          passphrase: Anx19970915
+          #分支
+          default-label: master
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
